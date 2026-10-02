@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Más Futuro — Consulta de inscripción</title>
+<meta name="description" content="Consultá por DNI si la inscripción al programa Más Futuro está registrada.">
+<meta property="og:title" content="Más Futuro — Consulta de inscripción">
+<meta property="og:description" content="Consultá por DNI si la inscripción está registrada.">
+<style>
+  :root{
+    --bg:#0f1729; --panel:#17203a; --panel2:#1e2a48; --line:#2b3960;
+    --txt:#e8edf8; --txt2:#9fb0d0; --acc:#4f8cff;
+    --ok:#22c55e; --warn:#f59e0b; --bad:#ef4444;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+       font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+       font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:40px 16px 56px}
+
+  .marca{font-size:11.5px;letter-spacing:2.4px;text-transform:uppercase;
+         color:var(--acc);font-weight:650;margin-bottom:10px}
+  h1{font-size:30px;line-height:1.18;margin:0 0 12px;letter-spacing:-.6px;font-weight:680}
+  .bajada{font-size:16.5px;color:var(--txt2);margin:0 0 30px;max-width:30em}
+
+  .cta{display:block;text-align:center;background:var(--acc);color:#fff;text-decoration:none;
+       padding:19px 26px;border-radius:13px;font-size:18px;font-weight:650;
+       box-shadow:0 8px 26px rgba(79,140,255,.28);transition:transform .12s, box-shadow .12s}
+  .cta:hover{transform:translateY(-1px);box-shadow:0 11px 32px rgba(79,140,255,.38)}
+  .pie-cta{text-align:center;font-size:13px;color:var(--txt2);margin-top:11px}
+
+  h2{font-size:12px;text-transform:uppercase;letter-spacing:1.1px;color:var(--txt2);
+     margin:42px 0 14px;font-weight:650}
+
+  .caso{display:flex;gap:14px;align-items:flex-start;background:var(--panel);
+        border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:10px;
+        border-left-width:4px}
+  .caso .ic{font-size:21px;line-height:1.2;flex:none}
+  .caso .t{font-weight:640;font-size:15px;margin-bottom:2px}
+  .caso .d{font-size:14px;color:var(--txt2)}
+  .c-ok{border-left-color:var(--ok)}
+  .c-wa{border-left-color:var(--warn)}
+  .c-no{border-left-color:var(--bad)}
+
+  .pasos{counter-reset:p;list-style:none;padding:0;margin:0}
+  .pasos li{counter-increment:p;position:relative;padding:0 0 16px 42px;font-size:15px}
+  .pasos li::before{content:counter(p);position:absolute;left:0;top:-1px;
+    width:28px;height:28px;border-radius:50%;background:var(--panel2);
+    border:1px solid var(--line);color:var(--acc);font-weight:680;font-size:13.5px;
+    display:flex;align-items:center;justify-content:center}
+
+  .qr{background:#fff;border-radius:14px;padding:16px;display:inline-block;line-height:0}
+  .qr img{width:190px;height:190px;display:block}
+  .qrbox{display:flex;gap:22px;align-items:center;flex-wrap:wrap;
+         background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .qrtxt{flex:1;min-width:210px;font-size:14.5px;color:var(--txt2)}
+  .qrtxt b{color:var(--txt);display:block;font-size:15.5px;margin-bottom:5px;font-weight:640}
+
+  .aviso{background:var(--panel2);border:1px solid var(--line);border-radius:12px;
+         padding:15px 17px;font-size:14px;color:var(--txt2);margin-top:12px}
+  .aviso b{color:var(--txt)}
+
+  footer{margin-top:46px;padding-top:20px;border-top:1px solid var(--line);
+         font-size:12.5px;color:var(--txt2);text-align:center}
+
+  @media (max-width:520px){
+    .wrap{padding:28px 16px 44px}
+    h1{font-size:25px}
+    .qrbox{justify-content:center;text-align:center}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="marca">Programa Más Futuro</div>
+  <h1>Consulta de inscripción</h1>
+  <p class="bajada">Escribí el número de documento y te decimos en el momento si la
+     inscripción está registrada, y qué hay que hacer si todavía no lo está.</p>
+
+  <a class="cta" href="https://script.google.com/macros/s/AKfycbzdfRqfXiGWb-qHcaCSfDTiinUSKftctUJrTGjJM85amN1pF1gckCoxBIl0lyZpbigK/exec" target="_blank" rel="noopener">Entrar a la consulta</a>
+  <div class="pie-cta">Necesitás el código de acceso que te dio el coordinador.</div>
+
+  <h2>Qué vas a ver</h2>
+
+  <div class="caso c-ok">
+    <div class="ic">✅</div>
+    <div><div class="t">Inscripción registrada</div>
+    <div class="d">Ya está inscripto. No hay que volver a cargar nada.</div></div>
+  </div>
+
+  <div class="caso c-wa">
+    <div class="ic">⚠️</div>
+    <div><div class="t">Falta inscribirse</div>
+    <div class="d">Está habilitado en el listado pero no completó el formulario.
+    La consulta te da el enlace para hacerlo.</div></div>
+  </div>
+
+  <div class="caso c-no">
+    <div class="ic">❌</div>
+    <div><div class="t">No figura en el listado</div>
+    <div class="d">No aparece entre los estudiantes del último año de secundaria.
+    La consulta te da el enlace para cargar el reclamo.</div></div>
+  </div>
+
+  <h2>Cómo se usa</h2>
+  <ol class="pasos">
+    <li>Entrá con el botón de arriba y escribí tu código de acceso. Queda guardado en
+        tu teléfono: solo lo escribís la primera vez.</li>
+    <li>Escribí el DNI, sin puntos ni espacios, y tocá Consultar.</li>
+    <li>En la pestaña <b>Listado</b> podés ver de una todos los chicos de tu localidad
+        a los que les falta inscribirse.</li>
+  </ol>
+
+  <h2>Para compartir</h2>
+  <div class="qrbox">
+    <div class="qr"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAsQAAALECAIAAACAN7HUAAATpElEQVR4nO3dwZHswFJAUYZ4BrDEBvy3BRtY4kGz/iwm9LlFviz1OQZMSyp1z41aVP58Pp9/AQD4v/rXv30BAMDdxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACD5M/lh//bv/zH5cav893/959hnPXnOT67n1HqduvdT9zXJWvis/2+Tv6un3tVtv4dvNfmc7UwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJKOzOZ7Ydu79E9vOfp98htvO6p+cYXHjum+b8XHKtrV44sa1OHXN2+Z3bHufn9j2ztuZAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjWzeZ4YvJM8m3n3r91/sK2s/qf2Da/Y9tZ/ZNrum22y7bv4La12PauPvHW/zun2JkAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASK6czfFWp860P/V33nqe/+S599vW9Ikb1/TUM3zrrJAb1+LGeT3fzM4EAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQGI2xyLbZjQ8MflZT9w4w+IJa/q7U7NmnpicK7Ht3ieZu3EXOxMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAyZWzOb75zPZt8zsmZwecWvcb35/JeRCn3PiunrLtvm78rG1u/N2YZGcCAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIFk3m+Ot57qfMjmjYXIttt3XjbMwTrnxvt667tvua9Lkc9527zeyMwEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQ/Hw+n799DfwTtp0hP3nm/+Q8iG1zHN76DE9563098dZ73zb/hd/ZmQAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBI1s3mODXLYPKzts1fmOT8/N/duKaTbpwr8c3f5cnf5ye2/fbe+AxPsTMBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIzO5th2jvop285j33b2+433vu2aT7nx+3XKjev+zet1yrbv6bb35xQ7EwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAADJn799AW/w1rPxb5xTcOqzTtl2fv6Nc0BufMee2PZ8ntj2Wzd570/c+Bt1ip0JACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgGR0Nse2c9RPOXXG/ilvvZ4br3nSqTkO2+ZBTNq2ptvmbrz1/Tm17qfufdvzecLOBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAyOpvjiVNnpE+eIT95Fv22+RRPbFvTJyav+Ym3rvuNMwi2zW2ZnAdx4/dr27yVt7IzAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCsm82xbZbBjXM3Jucd3HjN2+atPGGGxYwbn/MTb32ft70/k7atqZ0JACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgGR0Nse2c9RPzQ7Ydl+nzmzfdl9PTN7XjXNJJk0+n20zdG78fm27r23P58Y1nWRnAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAZnc1xyuQsA+f5/25yLSbnLzzx1nuffMcm525smxXyxOS9n3p/blyLG+fjbLtmOxMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAyehsjm2zA26chbHNtjkOk3/nrWf+P/HWGSjbvPXet70/237nb/xtsTMBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIzO5jh13vips9Ynzz8/dT1PTJ5FP3k+/Lb1OuXUZ217fyb/zjbbvhfbPuutv1Gn3PjdsTMBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIzO5pg8J3xyfscTbz0f/pRt58xPzg7Y5q339db3educi8n3Z/IZ8js7EwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAADJ6GyOU+fVbzv3/pQbn8/kOfzb5gvcOKfgxvs65ZuvefL7vm3OxVuveRs7EwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAADJ6GyOt84O2DYLY9vzOWXyvr75GW6zbbbCtndj25qeWq/J57xtBsq2NX3CzgQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBA8vP5fMY+bNvchMnzz7fNcdg2K+TUZ53y1jky29bixnkrN85NeGLbb9QpN677tut5ws4EAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQDI6m+MJ58P3v/PEjfMOtr0b29b0lMl3Y5tt38Eb50Fs+76/9T18YvLe7UwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJKOzOW6cB3Ej936XG2c93Phd3jYz4olt39Ntz/DG9/mUbb/zdiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAktHZHNu8dY7Djefnb/usG8/Yv/F93mbbc/7muS032jZLZZKdCQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBk3WyObXMKts1oOOWt9zVp2xyQt84cOfVZp9y47ttse4ZPuJ7f2ZkAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASP5Mftjk3I3J+R3bzkjfdu79jefVT8472Pb+bLueU7bNQHnrc37C9+t3N667nQkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAZHQ2x41zN57YNnfjlMln+MSTe//m53PKjXMBtpmc+3PKtnkip+7db8IMOxMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAyehsjsnz6k+d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bfMprGm3ba7NWz/ricm12Pb/ws4EAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQHLlbI63mjzXfdvcjRttmwvwxLZ3bNucgsl5B29diyfeOpPlm9mZAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjM5vhS28693zaDYPKs/m++9ycmr+fGe3+ypm+dI7PN5Pdr25ramQAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIrpzNceOZ7U9sm5fxxOTfOTWDYNvcjW1n9U/OCpmc2zJp2zyRyWe47TfqiRuvZxs7EwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAADJutkcN55Jfsq2M/af2DZPZHI+hbP6u8k5INue4bZ3/ptnxDyx7f3ZNqPKzgQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBA8vP5fP72NQAAF7MzAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJD8D5oIygQUe+qKAAAAAElFTkSuQmCC" alt="Código QR de la consulta"></div>
+    <div class="qrtxt"><b>Escaneá o compartí</b>
+      Apuntá la cámara del celular. Sirve impreso, por WhatsApp o pegado en la escuela.</div>
+  </div>
+
+  <div class="aviso">
+    <b>El código de acceso es personal.</b> Cada consulta queda registrada a nombre de
+    quien la hizo. No lo compartas: si otra persona lo necesita, pedile al coordinador
+    que le genere el suyo.
+  </div>
+
+  <footer>Programa Más Futuro · Provincia del Chaco</footer>
+</div>
+</body>
+</html>
